@@ -1,0 +1,342 @@
+{
+  "seller": [
+    {
+      "id": "c12b",
+      "name": "pavan",
+      "email": "pavan@gmail.com",
+      "password": "passwordPavan",
+      "userType": "seller"
+    },
+    {
+      "id": "0bc4",
+      "name": "goku",
+      "email": "goku@gmail.com",
+      "password": "passwordPavan",
+      "userType": "seller"
+    }
+  ],
+  "user": [
+    {
+      "id": "d769",
+      "name": "gohan",
+      "email": "gohan@gmail.com",
+      "password": "passwordPavan",
+      "userType": "user"
+    },
+    {
+      "id": "d4a6",
+      "name": "goten",
+      "email": "goten@gmail.com",
+      "password": "passwordPavan",
+      "userType": "user"
+    }
+  ],
+  "products": [
+    {
+      "id": "64cc",
+      "name": "iPhone",
+      "price": 900,
+      "color": "pink",
+      "description": "latest mobile phone",
+      "image": "assets/images/iphone.webp",
+      "sellerId": "0bc4"
+    },    
+    {
+      "id": "77bc",
+      "name": "High heel",
+      "price": 80,
+      "color": "red",
+      "description": "a brand new red heel",
+      "image": "assets/images/heels.webp",
+      "sellerId": "c12b"
+    },
+    {
+      "id": "421c",
+      "name": "Flower table",
+      "price": 70,
+      "color": "gray",
+      "description": "a beautiful flower table",
+      "image": "assets/images/flowerTable.webp",
+      "sellerId": "c12b"
+    },
+    {
+      "id": "034f",
+      "name": "Dell laptop",
+      "price": 555,
+      "color": "black",
+      "description": "A new gaming laptop",
+      "image": "assets/images/dell.webp",
+      "sellerId": "c12b"
+    },
+    {
+      "id": "d45b",
+      "name": "Office suit",
+      "price": 60,
+      "color": "gray",
+      "description": "A formal office wear",
+      "image": "assets/images/Coat_Two.webp",
+      "sellerId": "c12b"
+    },
+    {
+      "id": "7b4f",
+      "name": "Study table",
+      "price": 73,
+      "color": "gray",
+      "description": "simple study table",
+      "image": "assets/images/studyTable.webp",
+      "sellerId": "c12b"
+    },
+    {
+      "id": "e3b3",
+      "name": "Gaming mouse",
+      "price": 25,
+      "color": "black",
+      "description": "Sleek gaming mouse",
+      "image": "assets/images/mouse.webp",
+      "sellerId": "c12b"
+    },
+    {
+      "id": "0870",
+      "name": "Office chair",
+      "price": 60,
+      "color": "black",
+      "description": "A ergonomic chair",
+      "image": "assets/images/officechair.webp",
+      "sellerId": "c12b"
+    },
+    {
+      "id": "206a",
+      "name": "Cargo pant",
+      "price": 30,
+      "color": "gray",
+      "description": "comfy pants",
+      "image": "assets/images/pantstwo.webp",
+      "sellerId": "c12b"
+    },
+    {
+      "id": "da5a",
+      "name": "Plastic chair",
+      "price": 10,
+      "color": "skyblue",
+      "description": "A simple chair",
+      "image": "assets/images/plasticchair.webp",
+      "sellerId": "c12b"
+    },
+    {
+      "id": "249c",
+      "name": "A wooden table",
+      "price": 90,
+      "color": "gray",
+      "description": "A stylish study table",
+      "image": "assets/images/studytable2.webp",
+      "sellerId": "c12b"
+    },
+    {
+      "id": "5d78",
+      "name": "Tea table",
+      "price": 48,
+      "color": "gray",
+      "description": "a round tea table",
+      "image": "assets/images/teatable.webp",
+      "sellerId": "c12b"
+    },
+    {
+      "id": "c356",
+      "name": "Vacuum cleaner",
+      "price": 55,
+      "color": "blue",
+      "description": "unique vacuum cleaner",
+      "image": "assets/images/vacuum-cleaner.webp",
+      "sellerId": "0bc4"
+    },
+    {
+      "id": "d759",
+      "name": "Washing machine",
+      "price": 2600,
+      "color": "white",
+      "description": "a brand new washing machine",
+      "image": "assets/images/washing-machine.webp",
+      "sellerId": "0bc4"
+    },
+    {
+      "id": "7587",
+      "name": "Call of duty",
+      "price": 55,
+      "color": "green",
+      "description": "a modern warfare game",
+      "image": "assets/images/call-of-duty.webp",
+      "sellerId": "0bc4"
+    },
+    {
+      "id": "9ca8",
+      "name": "Jeans pants",
+      "price": 50,
+      "color": "blue",
+      "description": "Jeans pants collection",
+      "image": "assets/images/jeans-pants.webp",
+      "sellerId": "0bc4"
+    },
+    {
+      "id": "fb83",
+      "name": "Lenevo laptop",
+      "price": 680,
+      "color": "black",
+      "description": "work laptop",
+      "image": "assets/images/lenevo.webp",
+      "sellerId": "0bc4"
+    },
+    {
+      "id": "c8c7",
+      "name": "Macbook Pro",
+      "price": 1800,
+      "color": "white",
+      "description": "latest apple product",
+      "image": "assets/images/macbook-pro.webp",
+      "sellerId": "0bc4"
+    },
+    {
+      "id": "616e",
+      "name": "Music keyboard",
+      "price": 25,
+      "color": "skyblue",
+      "description": "toy for children",
+      "image": "assets/images/music-keyboard.webp",
+      "sellerId": "0bc4"
+    },
+    {
+      "id": "c5a3",
+      "name": "Pan set",
+      "price": 45,
+      "color": "silver",
+      "description": "kitchen set",
+      "image": "assets/images/pan-set.webp",
+      "sellerId": "0bc4"
+    },
+    {
+      "id": "20e9",
+      "name": "Smart TV",
+      "price": 550,
+      "color": "black",
+      "description": "Latest smart tv",
+      "image": "assets/images/smarttv.webp",
+      "sellerId": "0bc4"
+    },
+    {
+      "id": "3028",
+      "name": "Sneakers",
+      "price": 65,
+      "color": "white",
+      "description": "sleek sneakers",
+      "image": "assets/images/sneakers.webp",
+      "sellerId": "0bc4"
+    },
+    {
+      "id": "2993",
+      "name": "Table fan",
+      "price": 12,
+      "color": "blue",
+      "description": "a fan for summer",
+      "image": "assets/images/tablefan2.webp",
+      "sellerId": "0bc4"
+    },
+    {
+      "id": "2e44",
+      "name": "T-shirt",
+      "price": 15,
+      "color": "purple",
+      "description": "comfy t-shirt",
+      "image": "assets/images/tshirt.webp",
+      "sellerId": "0bc4"
+    },
+    {
+      "id": "2fa0",
+      "name": "White t-shirt",
+      "price": 15,
+      "color": "white",
+      "description": "latest t-shirt",
+      "image": "assets/images/tshirttwo.webp",
+      "sellerId": "0bc4"
+    },
+    {
+      "id": "e2ca",
+      "name": "Running shoes",
+      "price": 35,
+      "color": "white",
+      "description": "Shoe for running",
+      "image": "assets/images/running-shoes.webp",
+      "sellerId": "0bc4"
+    },
+    {
+      "id": "bd83",
+      "name": "HP Laptop",
+      "price": 850,
+      "color": "white",
+      "description": "office laptop",
+      "image": "assets/images/hplaptop.webp",
+      "sellerId": "0bc4"
+    },
+    {
+      "id": "79bc",
+      "name": "Toy Truck",
+      "price": 14,
+      "color": "blue",
+      "description": "a truck for children ",
+      "image": "assets/images/Truck-toy.webp",
+      "sellerId": "0bc4"
+    },
+    {
+      "id": "02ad",
+      "name": "A tablet",
+      "price": 450,
+      "color": "white",
+      "description": "a tablet for education",
+      "image": "assets/images/samsung-tablet.webp",
+      "sellerId": "0bc4"
+    },
+    {
+      "id": "3a67",
+      "name": "Smart watch",
+      "price": 250,
+      "color": "black",
+      "description": "a smart watch for smart phone",
+      "image": "assets/images/smart-watch.webp",
+      "sellerId": "0bc4"
+    },
+    {
+      "id": "8228",
+      "name": "Lego set",
+      "price": 65,
+      "color": "white",
+      "description": "a lego set to play",
+      "image": "assets/images/lego-set.webp",
+      "sellerId": "0bc4"
+    }
+  ],
+  "userCart": [],
+  "orders": [
+    {
+      "id": "9c37",
+      "address": "BS13",
+      "contact": "987",
+      "userId": "d769",
+      "totalPayment": 56.1,
+      "paymentMethod": "SEPA"
+    },
+    {
+      "id": "7336",
+      "address": "BS13",
+      "contact": "123",
+      "userId": "d769",
+      "totalPayment": 61.2,
+      "paymentMethod": "SEPA"
+    },
+    {
+      "id": "a7af",
+      "address": "MPS",
+      "contact": "333",
+      "userId": "d4a6",
+      "totalPayment": 249.9,
+      "paymentMethod": "SEPA"
+    }
+  ]
+}

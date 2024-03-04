@@ -1,0 +1,79 @@
+body {
+    font-family: sans-serif;
+}
+
+.custom-font {
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+}
+
+.container {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+//For Forms
+.common-form {
+    text-align: center;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 300px;
+}
+
+.form-input {
+    height: 35px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+}
+
+.form-button {
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+//For success/failure messages
+.success-p {
+    color: green;
+    text-align: center;
+}
+
+.error-p {
+    color: red;
+    text-align: center;
+}
+
+//For tables
+table {
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table td,
+table th {
+    border: 1px solid black;
+    padding: 10px;
+    min-height: 160px;
+    min-width: 100px;
+}
+
+
+.table-container {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+//For font awesome library icons
+fa-icon {
+    cursor: pointer;
+    color: black;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
