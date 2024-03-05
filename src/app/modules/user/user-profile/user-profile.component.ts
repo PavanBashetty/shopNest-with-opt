@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { ApiService } from 'src/app/_api/api.service';
 import { userSignUpData } from 'src/app/_interfaces/userCredentialsData';
 import { SellerServices } from 'src/app/_services/seller.service';
@@ -20,7 +21,7 @@ export class UserProfileComponent {
   totalOrderCount!:number;
   totalMoneySpent:number = 0;
   
-  constructor(private apiService: ApiService, private userServices: UserServices, private sellerServices:SellerServices) { }
+  constructor(private apiService: ApiService, private userServices: UserServices, private sellerServices:SellerServices, private store:Store<{userInfo:userSignUpData[]}>) { }
 
   ngOnInit() {
     //TO GET LOGGED USER'S IS
@@ -33,7 +34,19 @@ export class UserProfileComponent {
     this.apiService.getCartList(this.userId);
     this.totalOrderInfo(this.userId);
 
-    this.getPersonalDetails();    
+    //NGRX
+    this.store.select('userInfo').subscribe({
+      next:(data:userSignUpData[])=>{
+        if(data){          
+          this.name = data[0].name;
+          this.email = data[0].email;
+          this.userType = data[0].userType;
+        }else{          
+          this.getPersonalDetails();
+        }
+      },
+      error:(error)=>console.log(error)
+    })
   }
 
   getPersonalDetails(){

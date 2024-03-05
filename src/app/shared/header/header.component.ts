@@ -24,25 +24,30 @@ export class HeaderComponent {
 
   ngOnInit(){
    
-    //To check if the logged in person a user or seller and store their data in state management    
-    if(this.router.url){          
-      if(localStorage.getItem('seller')){
-        this.menuType = 'seller';
-        let sellerStore = localStorage.getItem('seller');
-        let sellerData = sellerStore && JSON.parse(sellerStore);
-        this.sellerServices.storeSellerId(sellerData[0].id);
-        this.sellerName = sellerData[0].name;          
-      }else if(localStorage.getItem('user')){
-        this.menuType = 'user';
-        let userStore = localStorage.getItem('user');
-        let userData = userStore && JSON.parse(userStore);
-        this.userServices.storeUserId(userData[0].id);
-        this.userName = userData[0].name;
-      }
-      else{
-        this.menuType = 'default';
-      }
-    }
+    //To check if the logged in person a user or seller and store their data in state management
+    this.router.events.subscribe({
+      next:(val:any)=>{
+        if(this.router.url){          
+          if(localStorage.getItem('seller')){
+            this.menuType = 'seller';
+            let sellerStore = localStorage.getItem('seller');
+            let sellerData = sellerStore && JSON.parse(sellerStore);
+            this.sellerServices.storeSellerId(sellerData[0].id);
+            this.sellerName = sellerData[0].name;          
+          }else if(localStorage.getItem('user')){
+            this.menuType = 'user';
+            let userStore = localStorage.getItem('user');
+            let userData = userStore && JSON.parse(userStore);
+            this.userServices.storeUserId(userData[0].id);
+            this.userName = userData[0].name;
+          }
+          else{
+            this.menuType = 'default';
+          }
+        }
+      },
+      error:(error)=>{console.log(error)}
+    })
 
     //Get count of items stored in localStorage's cart. [Works before login]
     this.getCartDataFromLocalStorage();

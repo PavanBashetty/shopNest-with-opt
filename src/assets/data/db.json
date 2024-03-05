@@ -40,7 +40,7 @@
       "description": "latest mobile phone",
       "image": "assets/images/iphone.webp",
       "sellerId": "0bc4"
-    },    
+    },
     {
       "id": "77bc",
       "name": "High heel",
@@ -312,7 +312,32 @@
       "sellerId": "0bc4"
     }
   ],
-  "userCart": [],
+  "userCart": [
+    {
+      "id": "673d",
+      "name": "Flower table",
+      "price": 70,
+      "color": "gray",
+      "description": "a beautiful flower table",
+      "image": "assets/images/flowerTable.webp",
+      "sellerId": "c12b",
+      "quantity": 1,
+      "userId": "d769",
+      "productId": "421c"
+    },
+    {
+      "id": "af18",
+      "name": "iPhone",
+      "price": 900,
+      "color": "pink",
+      "description": "latest mobile phone",
+      "image": "assets/images/iphone.webp",
+      "sellerId": "0bc4",
+      "quantity": 1,
+      "productId": "64cc",
+      "userId": "d769"
+    }
+  ],
   "orders": [
     {
       "id": "9c37",
@@ -336,6 +361,14 @@
       "contact": "333",
       "userId": "d4a6",
       "totalPayment": 249.9,
+      "paymentMethod": "SEPA"
+    },
+    {
+      "id": "e0de",
+      "address": "ee",
+      "contact": "11",
+      "userId": "d769",
+      "totalPayment": 71.4,
       "paymentMethod": "SEPA"
     }
   ]

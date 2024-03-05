@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { ApiService } from 'src/app/_api/api.service';
 import { product } from 'src/app/_interfaces/addProductData';
+import { userSignUpData } from 'src/app/_interfaces/userCredentialsData';
 import { UserServices } from 'src/app/_services/user.service';
+import { updateUserData } from 'src/app/_store/userStore/user.actions';
 
 @Component({
   selector: 'app-user-home',
@@ -13,7 +16,7 @@ export class UserHomeComponent {
   completeProductList!: product[]
   userId!:string;
 
-  constructor(private apiService:ApiService, private userServices:UserServices){}
+  constructor(private apiService:ApiService, private userServices:UserServices, private store:Store<{userInfo:userSignUpData[]}>){}
 
   ngOnInit(){
     this.userServices.userId$.subscribe({
@@ -28,5 +31,10 @@ export class UserHomeComponent {
     })
 
     this.apiService.getCartList(this.userId);
+
+    // this.userServices.userInfo$.subscribe({
+    //   next:(data)=>{this.store.dispatch(updateUserData({newData:data}))}
+    // })
+    
   }
 }

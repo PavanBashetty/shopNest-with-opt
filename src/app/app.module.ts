@@ -25,6 +25,8 @@ import { DynamicAdComponent } from './shared/home/dynamic-ad/dynamic-ad.componen
 import { SummerSaleComponent } from './shared/home/dynamic-ad/summer-sale/summer-sale.component';
 import { ApparelDiscountComponent } from './shared/home/dynamic-ad/apparel-discount/apparel-discount.component';
 import { ProductDetailsComponent } from './shared/product-details/product-details.component';
+import { StoreModule } from '@ngrx/store';
+import { userReducer } from './_store/userStore/user.reducer';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,10 @@ import { ProductDetailsComponent } from './shared/product-details/product-detail
     FontAwesomeModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    StoreModule.forRoot({
+      userInfo: userReducer
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

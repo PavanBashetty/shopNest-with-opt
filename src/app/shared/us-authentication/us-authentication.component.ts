@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
 import { ApiService } from 'src/app/_api/api.service';
 import { SellerAuthService } from 'src/app/_api/sellerAuth.service';
 import { UserAuthService } from 'src/app/_api/userAuth.service';
 import { cart, product } from 'src/app/_interfaces/addProductData';
 import { commonData, userLoginData, userSignUpData } from 'src/app/_interfaces/userCredentialsData';
 import { UserServices } from 'src/app/_services/user.service';
+import { updateUserData } from 'src/app/_store/userStore/user.actions';
 
 @Component({
   selector: 'app-us-authentication',
@@ -17,7 +19,7 @@ export class UsAuthenticationComponent {
   showLoginOnly:boolean = true;
   authErrorMsg!:string;
 
-  constructor(private apiService:ApiService, private userAuthService:UserAuthService, private userServices:UserServices, private router:Router, private sellerAuthService:SellerAuthService){}
+  constructor(private apiService:ApiService, private userAuthService:UserAuthService, private userServices:UserServices, private router:Router, private sellerAuthService:SellerAuthService, private store:Store<{userInfo:userSignUpData[]}>){}
   ngOnInit(){
     this.userAuthService.reloadUser();
     this.sellerAuthService.reloadSeller();
@@ -31,8 +33,10 @@ export class UsAuthenticationComponent {
     this.authErrorMsg = '';
     this.apiService.userLogin(userloginData).subscribe({
       next:(result:userSignUpData[])=>{
-        if(result && result.length>0){
+        if(result && result.length>0){  
           this.userServices.storeUserId(result[0].id);
+          // this.userServices.storeUserInfo(result);
+          this.store.dispatch(updateUserData({newData:result}))
           localStorage.setItem('user', JSON.stringify(result));
           this.router.navigate(['user/userHome']);
           this.localCartToDB();
@@ -57,8 +61,6 @@ export class UsAuthenticationComponent {
     let data = localStorage.getItem('localCart');
     let userId:string;
     let cartData:cart;
-  
-
     if(data){
       let cartDataList:product[] = JSON.parse(data)
       this.userServices.userId$.subscribe({
