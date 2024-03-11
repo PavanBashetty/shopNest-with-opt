@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { Subscription } from 'rxjs';
 import { ApiService } from 'src/app/_api/api.service';
 import { product } from 'src/app/_interfaces/addProductData';
 import { userSignUpData } from 'src/app/_interfaces/userCredentialsData';
@@ -15,6 +16,7 @@ export class UserHomeComponent {
 
   completeProductList!: product[]
   userId!:string;
+  productListSubscription!:Subscription;  
 
   constructor(private apiService:ApiService, private userServices:UserServices, private store:Store<{userInfo:userSignUpData[]}>){}
 
@@ -23,7 +25,7 @@ export class UserHomeComponent {
       next:(data)=>this.userId = data
     })
 
-    this.apiService.completeProductList().subscribe({
+    this.productListSubscription =  this.apiService.completeProductList().subscribe({
       next:(data:product[])=>{        
         this.completeProductList = data
       },
@@ -36,5 +38,9 @@ export class UserHomeComponent {
     //   next:(data)=>{this.store.dispatch(updateUserData({newData:data}))}
     // })
     
+  }
+
+  ngOnDestroy(){
+    if(this.productListSubscription){this.productListSubscription.unsubscribe()};
   }
 }

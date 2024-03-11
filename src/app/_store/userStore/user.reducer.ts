@@ -6,4 +6,7 @@ import { updateUserData } from "./user.actions";
 
 export let initialState!:userSignUpData[];
 
-export const userReducer = createReducer(initialState, on(updateUserData, (state,action)=>state = action.newData))
+export const userReducer = createReducer(
+    initialState, 
+    on(updateUserData, (state,action)=>state = action.newData)
+    )

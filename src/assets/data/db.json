@@ -60,15 +60,6 @@
       "sellerId": "c12b"
     },
     {
-      "id": "034f",
-      "name": "Dell laptop",
-      "price": 555,
-      "color": "black",
-      "description": "A new gaming laptop",
-      "image": "assets/images/dell.webp",
-      "sellerId": "c12b"
-    },
-    {
       "id": "d45b",
       "name": "Office suit",
       "price": 60,
@@ -310,34 +301,27 @@
       "description": "a lego set to play",
       "image": "assets/images/lego-set.webp",
       "sellerId": "0bc4"
-    }
-  ],
-  "userCart": [
-    {
-      "id": "673d",
-      "name": "Flower table",
-      "price": 70,
-      "color": "gray",
-      "description": "a beautiful flower table",
-      "image": "assets/images/flowerTable.webp",
-      "sellerId": "c12b",
-      "quantity": 1,
-      "userId": "d769",
-      "productId": "421c"
     },
     {
-      "id": "af18",
-      "name": "iPhone",
-      "price": 900,
-      "color": "pink",
-      "description": "latest mobile phone",
-      "image": "assets/images/iphone.webp",
-      "sellerId": "0bc4",
-      "quantity": 1,
-      "productId": "64cc",
-      "userId": "d769"
+      "id": "af1e",
+      "name": "Water bottle",
+      "price": 5,
+      "color": "gray",
+      "description": "metal bottle",
+      "image": "assets/images/metal-water-bottle.webp",
+      "sellerId": "c12b"
+    },
+    {
+      "id": "98b8",
+      "name": "Dell laptop",
+      "price": 555,
+      "color": "black",
+      "description": "A new gaming laptop",
+      "image": "assets/images/dell.webp",
+      "sellerId": "c12b"
     }
   ],
+  "userCart": [],
   "orders": [
     {
       "id": "9c37",

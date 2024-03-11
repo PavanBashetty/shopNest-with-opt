@@ -50,6 +50,7 @@ export class UsAuthenticationComponent {
     })
   }
 
+
   openSignUpPage(){
     this.showLoginOnly = false;
   }
